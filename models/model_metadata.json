@@ -1,0 +1,69 @@
+{
+  "best_model": "Logistic Regression",
+  "metrics": [
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.66,
+      "precision": 0.7453416149068323,
+      "recall": 0.6629834254143646,
+      "f1": 0.7017543859649122,
+      "roc_auc": 0.7276103811690422
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.65,
+      "precision": 0.7345679012345679,
+      "recall": 0.6574585635359116,
+      "f1": 0.6938775510204082,
+      "roc_auc": 0.6575514183573982
+    },
+    {
+      "model": "HistGradientBoosting",
+      "accuracy": 0.6233333333333333,
+      "precision": 0.6789473684210526,
+      "recall": 0.712707182320442,
+      "f1": 0.6954177897574124,
+      "roc_auc": 0.6150239101165328
+    }
+  ],
+  "cv_roc_auc_mean": 0.7284539496682074,
+  "cv_roc_auc_std": 0.0244762924852961,
+  "features": [
+    "tenure",
+    "monthly_charges",
+    "contract",
+    "internet_service",
+    "tech_support",
+    "payment_method",
+    "senior_citizen",
+    "partner",
+    "paperless_billing"
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.5611510791366906,
+      "recall": 0.6554621848739496,
+      "f1-score": 0.6046511627906976,
+      "support": 119.0
+    },
+    "1": {
+      "precision": 0.7453416149068323,
+      "recall": 0.6629834254143646,
+      "f1-score": 0.7017543859649122,
+      "support": 181.0
+    },
+    "accuracy": 0.66,
+    "macro avg": {
+      "precision": 0.6532463470217614,
+      "recall": 0.6592228051441571,
+      "f1-score": 0.6532027743778049,
+      "support": 300.0
+    },
+    "weighted avg": {
+      "precision": 0.6722793690513427,
+      "recall": 0.66,
+      "f1-score": 0.6632367741058071,
+      "support": 300.0
+    }
+  }
+}
