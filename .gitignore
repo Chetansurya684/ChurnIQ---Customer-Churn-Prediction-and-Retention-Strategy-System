@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+models/*.joblib
+models/*.json
+models/*.csv

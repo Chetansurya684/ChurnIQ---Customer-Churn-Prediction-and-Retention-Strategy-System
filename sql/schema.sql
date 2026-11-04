@@ -1,0 +1,5 @@
+CREATE DATABASE IF NOT EXISTS churn_db;
+USE churn_db;
+CREATE TABLE IF NOT EXISTS customers (customer_id VARCHAR(50) PRIMARY KEY, tenure INT, monthly_charges DECIMAL(10,2), contract VARCHAR(50), internet_service VARCHAR(50), tech_support VARCHAR(20), payment_method VARCHAR(100), senior_citizen TINYINT, partner VARCHAR(10), paperless_billing VARCHAR(10), actual_churn TINYINT, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+CREATE TABLE IF NOT EXISTS predictions (id INT AUTO_INCREMENT PRIMARY KEY, customer_id VARCHAR(50), churn_probability DECIMAL(8,5), risk_level VARCHAR(20), model_name VARCHAR(100), predicted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY(customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE);
+CREATE TABLE IF NOT EXISTS retention_actions (id INT AUTO_INCREMENT PRIMARY KEY, customer_id VARCHAR(50), risk_level VARCHAR(20), recommended_action TEXT, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY(customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE);
